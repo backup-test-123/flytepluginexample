@@ -1,11 +1,10 @@
-# flytek8ssparkplugin
-An example of Flyte Backend plugin for Spark on Kubernetes. It uses the Spark Operator https://github.com/GoogleCloudPlatform/spark-on-k8s-operator to start Spark jobs in kubernetes.
+# flytepluginexample
+An example of Flyte Backend plugin for Kubernetes Operators. This repo serves as a template for writing Flyte backend plugins for K8s operators. If you git grep for TODO's you will see all the bits that need to be replaced
 
-- common/proto/spark.proto specifies the custom information that is needed to execute besides the TaskTemplate
-- go/plugin/spark.go contains the backend plugin code that uses "Flyteplugins - plugin machinery"
-- flytek8ssparkplugin/sdk/..py contain the flytekit extensions that users can use to easily write a Flyte task that is executed on Spark
+- common/proto/plugin.proto specifies the custom information that is needed to execute besides the TaskTemplate
+- go/plugin/plugin.go contains the backend plugin code that uses "Flyteplugins - plugin machinery"
+- flyteexampleplugin/sdk/..py contain the flytekit extensions that users can use to easily write a Flyte task that is executed on the operator
 
-This example provides a canonical example to write backend plugins. Refer to the docs for more details.
 
 ## Types of Plugins.
 This repo serves as an example of how a `backend` Flyte plugin can be developed. Flyte can be extended with 2 types of plugins,
